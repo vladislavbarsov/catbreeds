@@ -37,6 +37,6 @@ The returned JSON gets parsed with Moshi into data class objects.
 
 ### Images
 
-![Cat Breed List](/screenshots/Screenshot_List.png?raw=true) <!-- .element height="50%" width="50%" -->
+![Cat Breed List](/screenshots/Screenshot_List.png?raw=true){:height="50%" width="50%"}
 
 ![Cat Breed Details](/screenshots/Screenshot_Details.png?raw=true)
