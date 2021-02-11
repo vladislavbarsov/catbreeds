@@ -39,4 +39,4 @@ The returned JSON gets parsed with Moshi into data class objects.
 
 ![Cat Breed List](/screenshots/Screenshot_List.png?raw=true)
 
-!Cat Breed Details](/screenshots/Screenshot_Details.png?raw=true)
+![Cat Breed Details](/screenshots/Screenshot_Details.png?raw=true)
