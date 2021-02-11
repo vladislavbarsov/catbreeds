@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.catbreeds.details.DetailsViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/clPadding">
+
+            <ImageView
+                android:id="@+id/breed_image"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/detailImageHeight"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic"
+                app:imageUrl="@{viewModel.selectedProperty.image.ulr}"/>
+
+            <TextView
+                android:id="@+id/breed_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/headerTopMargin"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/headerTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breed_image"
+                tools:text="Breed Name"
+                app:breedHeader="@{viewModel.selectedProperty.name}"/>
+
+            <TextView
+                android:id="@+id/breed_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondaryTextMargin"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/secondaryTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breed_name"
+                tools:text="Breed Descriptions"
+                app:breedDescription="@{String.format(@string/detail_description, viewModel.selectedProperty.description)}"/>
+
+            <TextView
+                android:id="@+id/breed_temperament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondaryTextMargin"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/secondaryTextSize"
+                android:text="Breed Temperament"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breed_description"
+                app:breedTemperament="@{String.format(@string/detail_temperament, viewModel.selectedProperty.temperament)}"/>
+
+            <TextView
+                android:id="@+id/breed_lifespan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondaryTextMargin"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/secondaryTextSize"
+                android:text="Breed Lifespan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/breed_temperament"
+                app:breedLifespan="@{String.format(@string/detail_lifespan, viewModel.selectedProperty.lifeSpan)}"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</layout>

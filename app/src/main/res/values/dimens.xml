@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="secondaryTextSize">16sp</dimen>
+    <dimen name="headerTextSize">35sp</dimen>
+    <dimen name="clPadding">16dp</dimen>
+    <dimen name="detailImageHeight">266dp</dimen>
+    <dimen name="headerTopMargin">16dp</dimen>
+    <dimen name="secondaryTextMargin">8dp</dimen>
+    <dimen name="liHeight">170dp</dimen>
+    <dimen name="liImageHeight">150dp</dimen>
+    <dimen name="liImagePadding">2dp</dimen>
+    <dimen name="liTextHeight">20dp</dimen>
+
+</resources>
